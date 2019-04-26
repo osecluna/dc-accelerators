@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div class="renderContent"></div>
+<div id="renderContent"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://unpkg.com/dc-delivery-sdk-js/dist/dynamicContent.browser.umd.min.js"></script>
@@ -43,7 +43,7 @@
           account: 'ampproduct',
           stagingEnvironment: vseDomain
         });
-        const $div = $('#contentRender');
+        const $div = $('#renderContent');
         client.renderContentItem(slotId, template)
           .then((response) => {
             const html = $.parseHTML(response.body);
